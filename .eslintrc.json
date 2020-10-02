@@ -1,0 +1,23 @@
+{
+  "env": {
+    "browser": true
+  },
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "plugins": ["react"],
+  "rules": {
+    "quotes": ["error", "single"],
+    "strict": "off",
+    "indent": ["warn", 2],
+    "semi": ["error", "always", { "omitLastInOneLineBlock": true }],
+    "no-multi-spaces": "warn",
+    "no-console": "warn",
+    "no-unused-vars": "error"
+  }
+}
