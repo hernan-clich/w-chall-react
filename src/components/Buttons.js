@@ -11,7 +11,7 @@ const Button = styled.div`
     text-transform: capitalize;
     font-weight: bolder;
     font-size: 0.9rem;
-    max-width: ${props => props.as === 'a' ? '50%' : '100%'};
+    /* max-width: ${props => props.as === 'a' ? '50%' : '100%'}; */
     text-align: center;
     border: none;
     vertical-align: middle;
@@ -23,4 +23,13 @@ export const NavButton = styled(Button)`
     color: ${primary()};
     border: 2px solid ${primary()};
     margin-right: ${outerSpacing()};
+`;
+
+export const SocialButton = styled(Button)`
+    background-color: ${plainWhite(0)};
+    color: ${plainWhite()};
+    border: 2px solid ${primary()};
+    margin-top: 1em;
+    font-size: 1.5vw;
+    padding: 0.5em 4em;
 `;

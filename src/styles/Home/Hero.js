@@ -10,23 +10,12 @@ export const StyledHero = styled.section`
     #hero-wrapper {
         min-width: 100vw;
         min-height: 100vh;
-        background: url('./assets/Backgrounds/Bg_Header.png');
+        background-image: url('./assets/Backgrounds/Bg_Header.png');
+        background-size: cover;
         z-index: 1;
         display: flex;
         flex-flow: row nowrap;
     
-    @media (min-width: 616px){
-        #hero-wrapper {
-            background: url('./assets/Backgrounds/Bg_Header@2x.png');
-        }
-    }
-
-    @media (min-width: 1232px){
-        #hero-wrapper {
-            background: url('./assets/Backgrounds/Bg_Header@3x.png');
-        }
-    }
-
         .hero-text {
             width: 50vw;
             display: flex;
@@ -57,6 +46,20 @@ export const StyledHero = styled.section`
                 transform: scaleX(-1);
                 margin: 3em 0 0 4em;
             }
+        }
+    }
+
+    @media (min-width: 616px){
+        #hero-wrapper {
+            background-image: url('./assets/Backgrounds/Bg_Header@2x.png');
+            background-size: cover;
+        }
+    }
+
+    @media (min-width: 1232px){
+        #hero-wrapper {
+            background-image: url('./assets/Backgrounds/Bg_Header@3x.png');
+            background-size: cover;
         }
     }
 `;
