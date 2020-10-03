@@ -10,6 +10,20 @@ export const StyledBenefits = styled.section`
     flex-flow: column nowrap;
     align-items: center;
     justify-content: space-around;
+    position: relative;
+
+    &::after {
+        position: absolute;
+        content: "";
+        height: 2px;
+        width: 85%;
+        background-color: rgba(238, 241, 246, 1);
+        bottom: 0;
+        left: 7.5%;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+    }
+
+
 
     h2 {
         text-align: center;
@@ -24,6 +38,7 @@ export const StyledBenefits = styled.section`
     #benefits-wrapper {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
+        grid-gap: 0.9em;  
     }
 
     @media (min-width: 576px){

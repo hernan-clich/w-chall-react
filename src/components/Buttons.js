@@ -33,3 +33,13 @@ export const SocialButton = styled(Button)`
     font-size: 1.5vw;
     padding: 0.5em 4em;
 `;
+
+export const FooterButton = styled(Button)`
+    background-color: ${primary()};
+    color: ${plainWhite()};
+    border: none;
+    font-size: 1.3vw;
+    padding: 1em 4em;
+    font-family: Montserrat-Bold;
+    box-shadow: 0px 0px 10px 0px rgba(217,217,217,1);
+`;
