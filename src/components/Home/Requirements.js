@@ -5,7 +5,7 @@ import SingleRequirement from './SingleRequirement';
 
 const Requirements = () => {
   return (
-    <StyledRequirements>
+    <StyledRequirements id="req">
       <div id="req-wrapper">
         <div className="req-header">
           <h2>Requerimientos</h2>

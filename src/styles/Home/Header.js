@@ -4,21 +4,25 @@ import { plainWhite, outerSpacing } from '../Variables';
 
 export const StyledHeader = styled.header`
     min-width: 100vw;
-    min-height: 20vh;
-    background-color: ${plainWhite()};
+    min-height: ${props => props.height};
     position: fixed;
     top: 0;
     left: 0;
     display: flex;
     align-items: center;
     z-index: 3;
+    box-shadow: ${props => props.boxShadow};
+    background-color: ${props => props.backgroundColor};
+    transition: all 500ms ease-in-out;
 
     #header-wrapper {
-        min-height: 6vh;
+        min-height: 100%;
         width: 100%;
         display: flex;
         justify-content: space-between;
-        align-items: flex-end;
+        align-items: center;
+        transition: all 250ms ease-in-out;
+        background-color: ${plainWhite(0)};
 
         img {
             margin-left: ${outerSpacing()};
@@ -28,12 +32,12 @@ export const StyledHeader = styled.header`
         .header-right {
             display: flex;
             flex-flow: row nowrap;
-            ul {
+            div {
                 list-style: none;
                 display: flex;
                 flex-flow: row nowrap;
 
-                li {
+                span, a {
                     margin: 0.25em 2em;
                     padding: 0.25em 0em;
                     align-self: flex-end;
@@ -45,19 +49,19 @@ export const StyledHeader = styled.header`
                     &::after {
                         position: absolute;
                         content: "";
-                        height: 0px;
+                        height: 2px;
                         width: 50%;
                         bottom: -10%;
                         left: 25%;
                         right: 25%;
-                        background-color: black;
+                        background-color: rgba(0, 0, 0, 0);
                         transition: all 90ms ease-in-out;
                     }
 
                     @media (hover: hover) {
                         &:hover {
                             &::after {
-                                background-color: black;
+                                background-color: rgba(0, 0, 0, 1);
                                 height: 2px;
                                 width: 100%;
                                 left: 0%;

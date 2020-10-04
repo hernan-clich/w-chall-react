@@ -4,7 +4,7 @@ import { StyledTech } from '../../styles/Home/Tech';
 
 const Tech = () => {
   return (
-    <StyledTech>
+    <StyledTech id="tech">
       <div id="tech-wrapper">
         <div className="tech-text">
           <h2>Estamos buscando <br/>para incorporar gente <br/> increíble para estas <br/> tecnologías:</h2>

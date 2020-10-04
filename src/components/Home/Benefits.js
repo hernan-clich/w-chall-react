@@ -5,7 +5,7 @@ import SingleBenefit from './SingleBenefit';
 
 const Benefits = () => {
   return (
-    <StyledBenefits>
+    <StyledBenefits id="benefits">
       <h2>Entre los beneficios que ofrecemos se encuentran <span> ;)</span></h2>
       <div id="benefits-wrapper">
         <SingleBenefit 
