@@ -1,6 +1,5 @@
-export const isSignedInAction = status => {
+export const isSignedInAction = () => {
   return {
-    type: 'IS_SIGNED_IN',
-    payload: status
+    type: 'IS_LOGGED'
   };
 };

@@ -18,7 +18,7 @@ const Button = styled.div`
     display: inline-block;
 `;
 
-export const NavButton = styled(Button)`
+export const LoginButton = styled(Button)`
     background-color: ${plainWhite()};
     color: ${primary()};
     border: 2px solid ${primary()};
@@ -33,6 +33,17 @@ export const NavButton = styled(Button)`
         &:hover {
             background-color: ${primary()};
             color: ${plainWhite()};
+        }
+    }
+`;
+
+export const LogoutButton = styled(LoginButton)`
+    color: green;
+    border: 2px solid green;
+
+    @media (hover: hover) {
+        &:hover {
+            background-color: green;
         }
     }
 `;
@@ -79,4 +90,30 @@ export const FooterButton = styled(Button)`
             border: 2px solid ${primary(1)};
         }
     }      
+`;
+
+export const FormButton = styled(FooterButton)`
+    padding: 0.5em 2em;
+    font-size: 1rem;
+    margin-top: 1em;
+    outline: none;
+`;
+
+export const DisabledButton = styled(FooterButton)`
+    padding: 0.5em 2em;
+    font-size: 1rem;
+    margin-top: 1em;
+    background-color: rgba(160, 160, 160, 1);
+    color: rgba(110, 110, 110, 1);
+    box-shadow: 0px 0px 0px 0px rgba(217,217,217,1);
+    border: none;
+
+    @media (hover: hover) {
+        &:hover {
+            background-color: rgba(160, 160, 160, 1);
+            color: rgba(110, 110, 110, 1);
+            border: none;
+            cursor: not-allowed;
+        }
+    }
 `;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Header from './Home/Header';
+import Header from './Header';
 import Hero from './Home/Hero';
 import Tech from './Home/Tech';
 import Social from './Home/Social';

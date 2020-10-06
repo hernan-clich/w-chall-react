@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Link as ScrollLink } from 'react-scroll';
-import { animateScroll as scroll } from 'react-scroll';
+import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
+import { useSelector } from 'react-redux';
 
-import { NavButton } from '../Buttons';
-import { StyledHeader } from '../../styles/Home/Header';
+import { LoginButton, LogoutButton } from './Buttons';
+import { StyledHeader } from '../styles/Home/Header';
 
 const Header = () => {
   const [prevScrollpos, setPrevScrollpos] = useState(window.pageYOffset);
+  const isUserLoggedIn = useSelector(state => state.isSignedIn);
   
   // Side effects
   // Track Y Offset position to trigger styling changes in navbar
@@ -34,10 +35,14 @@ const Header = () => {
       backgroundColor={(prevScrollpos === 0) ? 'rgba(255, 255, 255, 0)' : 'rgba(255, 255, 255, 1)'}
     >
       <div id="header-wrapper">
-        <img src="/assets/logo_full_color.svg" alt="wolox logo" />
+        <img 
+          src="/assets/logo_full_color.svg" 
+          alt="wolox logo" 
+          onClick={scrollBackToTop}
+        />
         <div className="header-right">
           <div>
-            <span onClick={scrollBackToTop}>Inicio</span>
+            <Link to="/">Inicio</Link>
             <ScrollLink 
               to="tech" 
               smooth={true} 
@@ -63,7 +68,11 @@ const Header = () => {
               Requerimientos
             </ScrollLink>
           </div>
-          <NavButton as={Link} to="/login">Login</NavButton>
+          { (!isUserLoggedIn && !localStorage.getItem('user')) ?
+            <LoginButton as={Link} to="/login">Login</LoginButton> :
+            <LogoutButton as={Link} to="/lists">Listado</LogoutButton>
+          }
+          
         </div>
       </div>
     </StyledHeader>

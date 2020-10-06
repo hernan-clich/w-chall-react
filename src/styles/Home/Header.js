@@ -13,7 +13,7 @@ export const StyledHeader = styled.header`
     z-index: 3;
     box-shadow: ${props => props.boxShadow};
     background-color: ${props => props.backgroundColor};
-    transition: all 500ms ease-in-out;
+    transition: min-height 500ms ease-in-out,  box-shadow 500ms ease-in-out;
 
     #header-wrapper {
         min-height: 100%;
@@ -27,6 +27,7 @@ export const StyledHeader = styled.header`
         img {
             margin-left: ${outerSpacing()};
             width: clamp(150px, 15%, 30vw);
+            cursor: pointer;
         }
 
         .header-right {
@@ -37,7 +38,7 @@ export const StyledHeader = styled.header`
                 display: flex;
                 flex-flow: row nowrap;
 
-                span, a {
+                a {
                     margin: 0.25em 2em;
                     padding: 0.25em 0em;
                     align-self: flex-end;
@@ -45,6 +46,8 @@ export const StyledHeader = styled.header`
                     font-size: 1.1rem;
                     cursor: pointer;
                     position: relative;
+                    text-decoration: none;
+                    color: black;
 
                     &::after {
                         position: absolute;
