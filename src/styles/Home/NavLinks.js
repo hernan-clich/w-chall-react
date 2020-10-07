@@ -45,5 +45,25 @@ export const StyledNavLinks = styled.div`
             }
         }
     }
-    
+
+    @media (min-width: 1361px){
+        div {
+
+            span, a {
+                font-size: 1.5vw;
+
+                &::after {
+                    height: 0.3vh;
+                }
+
+                @media (hover: hover) {
+                    &:hover {
+                        &::after {
+                            height: 0.3vh;
+                        }
+                    }
+                }
+            }
+        }
+    }
 `;

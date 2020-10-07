@@ -9,7 +9,7 @@ const PrivateRoute = ({component: Component, ...rest}) => {
 
   return (
     <Route {...rest} render={props => (
-      (isUserLoggedIn || localStorage.getItem('user'))
+      (localStorage.getItem('user') ?? isUserLoggedIn)
         ? <Component {...props} />
         : <Redirect to="/login" />
     )}/>
