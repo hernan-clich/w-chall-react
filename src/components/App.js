@@ -5,6 +5,8 @@ import {GlobalStyles} from '../styles/GlobalStyles';
 import Home from './Home/Home';
 import Login from './Login/Login';
 import Lists from './Lists/Lists';
+import PrivateRoute from './PrivateRoute';
+import PublicRoute from './PublicRoute';
 
 const App = () => {
   return (
@@ -12,9 +14,9 @@ const App = () => {
       <GlobalStyles/>
       <BrowserRouter>
         <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/login" component={Login} />
-          <Route path="/lists" component={Lists} />
+          <PublicRoute restricted={false} component={Home} path="/" exact />
+          <PublicRoute restricted={true} component={Login} path="/login" exact />
+          <PrivateRoute component={Lists} path="/lists" exact />
           <Route path="*" component={() => 'Error 404: La página no existe'} />
         </Switch>
       </BrowserRouter>

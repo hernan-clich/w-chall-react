@@ -3,9 +3,7 @@ import React from 'react';
 import Form from './Form';
 
 const Login = () => {
-  return (
-    <Form/>
-  );
+  return <Form/>;
 };
 
 export default Login;

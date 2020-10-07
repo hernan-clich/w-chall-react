@@ -1,6 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { Redirect } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 import { StyledForm } from '../../styles/Login/Form';
 import { FormButton, DisabledButton } from '../Buttons';
@@ -15,7 +14,6 @@ const LoginForm = () => {
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
 
-  const isUserLoggedIn = useSelector(state => state.isSignedIn);
   const dispatch = useDispatch();
 
   //Regex to validate input fields
@@ -76,9 +74,6 @@ const LoginForm = () => {
     e.preventDefault();
   };
 
-  if (isUserLoggedIn || localStorage.getItem('user')) {
-    return <Redirect to="/lists"/>;
-  }
   return (
     <StyledForm>
       <div id="form-wrapper">

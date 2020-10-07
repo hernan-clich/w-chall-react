@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import { Redirect } from 'react-router-dom';
-import { useSelector } from 'react-redux';
 import { useQuery } from 'react-query';
 
 import { StyledLists } from '../../styles/Lists/Lists';
@@ -19,9 +17,6 @@ const Lists = () => {
   const [searchList, setSearchList] = useState('');
   const [sortAscending, setSortAscending] = useState(true);
   const [searchByName, setSearchByName] = useState(true);
-
-  // Bringing state from redux
-  const isUserLoggedIn = useSelector(state => state.isSignedIn);
 
   // React Query hook
   const { data, status } = useQuery('tecnologias', fetchTecnologias);
@@ -43,12 +38,6 @@ const Lists = () => {
       return arr.sort((a, b) => (a.tech.toLowerCase() < b.tech.toLowerCase()) ? 1 : -1);
     }
   };
-
-  // If user isn't logged in then redirect to login page
-
-  if (!isUserLoggedIn && !localStorage.getItem('user')) {
-    return <Redirect to="/login"/>;
-  }
 
   return (
     <StyledLists>
