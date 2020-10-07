@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { primary, secondary } from '../../styles/Variables';
+
 export const StyledListItem = styled.div`
     min-width: 95vw;
     min-height: 20vh;
@@ -113,6 +115,66 @@ export const StyledListItem = styled.div`
 
             .list-type-wrapper {
                 margin-left: 0.5em;
+
+                p[data-type='Mobile'] {
+                    color: crimson;
+                }
+
+                p[data-type='Back-End'] {
+                    color: ${secondary()};
+                }
+
+                p[data-type='Front-End'] {
+                    color: ${primary()};
+                }
+            }
+        }
+    }
+
+    @media (min-width: 576px){
+        .list-top {
+            
+            .list-logo {
+                height: 4rem;
+                width: 4rem;
+            }
+
+            .list-tech {
+
+                .tech-header {
+                    font-size: 1rem;
+                }
+
+                .tech-subheader {
+                    font-size: 0.8rem;
+                    padding: 0.2em 0;
+
+                    p:nth-child(2) {
+                        font-size: 0.7rem;
+                        padding: 0.3em 0;
+                    }
+
+                    p:nth-child(3) {
+                        font-size: 0.6rem;
+                    }
+                }
+            }
+        }
+
+        .list-bottom {
+
+            .list-author {
+                font-size: 0.8rem;
+                padding-left: 1em;
+
+                p:nth-child(1) {
+                    font-family: 'Montserrat-SemiBoldItalic';
+                    font-size: 0.7rem;
+                }
+            }
+
+            .list-type {
+                font-size: 0.9rem;
             }
         }
     }

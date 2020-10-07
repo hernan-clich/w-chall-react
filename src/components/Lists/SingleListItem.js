@@ -29,7 +29,7 @@ const SingleListItem = props => {
         </div>
         <div className="list-type">
           <div className="list-type-wrapper">
-            <p>{props.type}</p>
+            <p data-type={props.type}>{props.type}</p>
           </div>
         </div>
       </div>

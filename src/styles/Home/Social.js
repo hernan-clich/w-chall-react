@@ -10,10 +10,12 @@ export const StyledSocial = styled.section`
         min-width: 100vw;
         min-height: 70vh;
         display: flex;
-        flex-flow: row wrap;
+        flex-flow: column wrap;
 
         .social-img {
-            min-width: 55vw;
+            min-width: 100vw;
+            width: 100vw;
+            min-height: 50vh;
             background-image: url('./assets/img_woloxer.png');
             background-size: cover;
             display: flex;
@@ -22,8 +24,9 @@ export const StyledSocial = styled.section`
             justify-content: center;
 
             h2 {
-                font-size: 3.5vw;
+                font-size: 30px;
                 font-family: Montserrat-Bold;
+                margin-top: 2em;
 
                 span:nth-child(1) {
                     color: ${secondary()};
@@ -38,23 +41,27 @@ export const StyledSocial = styled.section`
                 display: flex;
                 flex-flow: row nowrap;
                 align-items: center;
-                margin-top: 3em;
+                margin-top: 2em;
+                height: 32px;
 
                 img {
-                    width: 25%;
+                    width: 30px;
                 }
 
                 span {
+                    width: 50%;
                     color: ${plainWhite()};
                     font-family: Montserrat-Regular;
                     margin-left: 1em;
-                    font-size: 1.4vw;
+                    font-size: 12px;
                 }
             }
         }
 
         .social-text {
-            min-width: 45vw;
+            min-width: 100vw;
+            width: 100vw;
+            min-height: 50vh;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -62,7 +69,8 @@ export const StyledSocial = styled.section`
 
             h2 {
                 text-align: center;
-                font-size: 3vw;
+                font-size: 25px;
+                margin: 3em 0.5em;
                 
                 span:nth-child(2) {
                     color: ${primary()};
@@ -77,6 +85,8 @@ export const StyledSocial = styled.section`
         }
     }
 
+    /* Background optimization media queries */
+
     @media (min-width: 1364px){
         #social-wrapper .social-img {
             background-image: url('./assets/img_woloxer@2x.png');
@@ -88,6 +98,44 @@ export const StyledSocial = styled.section`
         #social-wrapper .social-img {
             background-image: url('./assets/img_woloxer@3x.png');
             background-size: cover;
+        }
+    }
+
+    /* Layout media queries */
+
+    @media (min-width: 768px){
+        #social-wrapper {
+            flex-flow: row wrap;
+
+            .social-img {
+                min-width: 55vw;
+                width: 55vw;
+
+                h2 {
+                    font-size: 47px;
+                }
+
+                .social-twitter {
+                    margin-top: 3em;
+
+                    img {
+                        width: 25%;
+                    }
+
+                    span {
+                        margin-left: 1em;
+                        font-size: 19px;
+                    }
+                }
+            }
+
+            .social-text {
+                min-width: 45vw;
+                width: 45vw;
+                h2 {
+                    font-size: 40px;
+                }
+            }
         }
     }
 `;

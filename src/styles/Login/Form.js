@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const StyledForm = styled.div`
     min-height: 100vh;
-    min-width: 100vh;
+    min-width: 100vw;
     position: relative;
     display: flex;
     justify-content: center;
@@ -21,7 +21,7 @@ export const StyledForm = styled.div`
     }
 
     #form-wrapper {
-        width: 60vw;
+        width: 90vw;
         height: 70vh;
         display: flex;
         flex-flow: column nowrap;
@@ -155,6 +155,8 @@ export const StyledForm = styled.div`
         }
     }
 
+    /* Background optimization media queries */
+
     @media (min-width: 616px){
         &::before {
             background-image: url('./assets/Backgrounds/Bg_Header@2x.png');
@@ -166,6 +168,14 @@ export const StyledForm = styled.div`
         &::before {
             background-image: url('./assets/Backgrounds/Bg_Header@3x.png');
             background-size: cover;
+        }
+    }
+
+    /* Layout media queries */
+
+    @media (min-width: 576px){
+        #form-wrapper {
+            width: 40vw;
         }
     }
 `;

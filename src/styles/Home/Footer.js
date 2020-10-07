@@ -30,8 +30,10 @@ export const StyledFooter = styled.footer`
 
         h2 {
             padding: 0.25em;
-            font-size: 3.25vw;
+            font-size: 30px;
             font-family: Montserrat-SemiBold;
+            margin: 3em 0.5em 1.5em;
+            text-align: center;
 
             span {
                 color: ${primary()};
@@ -40,9 +42,11 @@ export const StyledFooter = styled.footer`
 
         h3 {
             padding: 0.25em;
-            font-size: 2.35vw;
+            font-size: 22px;
             font-family: Montserrat-Regular;
-            margin-bottom: 1.5em;
+            margin-bottom: 0;
+            margin: 0 0.5em 0.5em;
+            text-align: center;
         }
     }
 
@@ -51,9 +55,11 @@ export const StyledFooter = styled.footer`
         justify-content: center;
         
         img {
-            margin-bottom: 3em;
+            margin: 6em 0.5em 3em;
         }
     }
+
+    /* Background optimization media queries */
 
     @media (min-width: 1364px){
         &::before {
@@ -67,5 +73,24 @@ export const StyledFooter = styled.footer`
             background-image: url('./assets/Backgrounds/Bg_Footer@3x.png');
             background-size: cover;
         }        
+    }
+
+    /* Layout media queries */
+
+    @media (min-width: 768px){
+
+        #footer-content {
+
+            h2 {
+                padding: 0.25em;
+                font-size: 44px;
+            }
+
+            h3 {
+                padding: 0.25em;
+                font-size: 32px;
+                margin-bottom: 1.5em;
+            }
+        }
     }
 `;

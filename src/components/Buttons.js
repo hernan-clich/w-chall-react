@@ -11,7 +11,6 @@ const Button = styled.div`
     text-transform: capitalize;
     font-weight: bolder;
     font-size: 0.9rem;
-    /* max-width: ${props => props.as === 'a' ? '50%' : '100%'}; */
     text-align: center;
     border: none;
     vertical-align: middle;
@@ -37,7 +36,7 @@ export const LoginButton = styled(Button)`
     }
 `;
 
-export const LogoutButton = styled(LoginButton)`
+export const ListButton = styled(LoginButton)`
     color: green;
     border: 2px solid green;
 
@@ -52,8 +51,9 @@ export const SocialButton = styled(Button)`
     background-color: ${plainWhite(0)};
     color: ${plainWhite()};
     border: 2px solid ${primary()};
-    margin-top: 1em;
-    font-size: 1.5vw;
+    margin-top: 0;
+    margin: 1em 0 3em;
+    font-size: 12px;
     padding: 0.5em 4em;
     transition: all 300ms ease-in-out;
 
@@ -66,14 +66,19 @@ export const SocialButton = styled(Button)`
             background-color: ${plainWhite()};
             color: ${primary()};
         }
-    }    
+    }
+
+    @media (min-width: 768px){
+        margin-top: 1em;
+        font-size: 20px;
+    }
 `;
 
 export const FooterButton = styled(Button)`
     background-color: ${primary()};
     color: ${plainWhite()};
     border: 2px solid ${primary(0)};
-    font-size: 1.3vw;
+    font-size: 14px;
     padding: 1em 4em;
     font-family: Montserrat-Bold;
     box-shadow: 0px 0px 10px 0px rgba(217,217,217,1);
@@ -89,7 +94,11 @@ export const FooterButton = styled(Button)`
             color: ${primary()};
             border: 2px solid ${primary(1)};
         }
-    }      
+    }
+
+    @media (min-width: 768px){
+        font-size: 18px;
+    }
 `;
 
 export const FormButton = styled(FooterButton)`

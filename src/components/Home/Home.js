@@ -1,12 +1,12 @@
 import React from 'react';
 
 import Header from './Header';
-import Hero from './Home/Hero';
-import Tech from './Home/Tech';
-import Social from './Home/Social';
-import Benefits from './Home/Benefits';
-import Requirements from './Home/Requirements';
-import Footer from './Home/Footer';
+import Hero from './Hero';
+import Tech from './Tech';
+import Social from './Social';
+import Benefits from './Benefits';
+import Requirements from './Requirements';
+import Footer from './Footer';
 
 const Home = () => {
   return (

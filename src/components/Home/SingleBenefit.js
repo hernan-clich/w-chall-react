@@ -19,8 +19,8 @@ const SingleBenefit = props => {
 };
 
 SingleBenefit.propTypes = {
-  benImg: PropTypes.string, 
-  benText1: PropTypes.string, 
+  benImg: PropTypes.string.isRequired, 
+  benText1: PropTypes.string.isRequired, 
   benText2: PropTypes.string, 
   benText3: PropTypes.string
 };

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Form from './Login/Form';
+import Form from './Form';
 
 const Login = () => {
   return (

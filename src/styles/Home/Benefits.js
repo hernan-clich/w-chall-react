@@ -23,12 +23,11 @@ export const StyledBenefits = styled.section`
         box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
     }
 
-
-
     h2 {
         text-align: center;
-        font-size: 2.25vw;
+        font-size: 22px;
         padding-top: 1em;
+        margin: 3.5em 0.5em;
 
         span {
             color: ${primary()};
@@ -49,6 +48,11 @@ export const StyledBenefits = styled.section`
     }
 
     @media (min-width: 768px){
+        
+        h2 {
+            font-size: 30px;
+        }
+        
         #benefits-wrapper {
             display: grid;
             grid-template-columns: repeat(3, 1fr);

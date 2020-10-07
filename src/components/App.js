@@ -2,9 +2,9 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import {GlobalStyles} from '../styles/GlobalStyles';
-import Home from './Home';
-import Login from './Login';
-import Lists from './Lists';
+import Home from './Home/Home';
+import Login from './Login/Login';
+import Lists from './Lists/Lists';
 
 const App = () => {
   return (
