@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Lists component test Snapshot of Lists 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-bdnylx rcKPI"
+  >
+    <div
+      class="sc-gtssRu gxRolR"
+    >
+      <a
+        class="sc-dlnjPT sc-gKAblj gYrkDS eEUOIx list-button-back"
+        href="/"
+      >
+        Volver a Home
+      </a>
+      <div
+        class="list-img"
+      />
+      <div
+        class="list-search-input"
+      >
+        <input
+          id="search-list"
+          name="search-list"
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        class="list-radios"
+      >
+        <input
+          checked=""
+          id="nombre"
+          type="radio"
+          value="Nombre"
+        />
+        <label
+          data-testid="tipo"
+          for="tipo"
+        >
+          Nombre
+        </label>
+        <input
+          id="tipo"
+          type="radio"
+          value="Tipo"
+        />
+        <label
+          for="tipo"
+        >
+          Tipo
+        </label>
+      </div>
+      <div
+        class="list-sorting"
+      >
+        <p
+          class="sort-asc"
+          data-testid="list-sorting"
+        >
+          Ordenando de forma 
+          <span>
+            ascendente
+          </span>
+        </p>
+      </div>
+    </div>
+    <div
+      class="sc-jrsJCI khxShv"
+    />
+  </div>
+</DocumentFragment>
+`;

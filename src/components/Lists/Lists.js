@@ -4,6 +4,7 @@ import { useQuery } from 'react-query';
 import { StyledLists } from '../../styles/Lists/Lists';
 import SearchBar from './SearchBar';
 import SingleListItem from './SingleListItem';
+import Loader from '../Loader';
 
 // Fetching data from API
 const fetchTecnologias = async () => {
@@ -50,9 +51,7 @@ const Lists = () => {
         setSearchByName={setSearchByName}
 
       />
-      {status === 'loading' && (
-        <h2>Cargando listado...</h2>
-      )}
+      {status === 'loading' && (<Loader/>)}
       {status === 'success' && (
         <>
           <div id="list-wrapper">

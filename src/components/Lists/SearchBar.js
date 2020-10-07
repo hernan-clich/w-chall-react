@@ -29,7 +29,7 @@ const SearchBar = props => {
           checked={props.searchByName} 
 
         />
-        <label htmlFor="tipo">Nombre</label>
+        <label htmlFor="tipo" data-testid="tipo">Nombre</label>
         <input 
           type="radio" 
           value="Tipo" 
@@ -43,8 +43,9 @@ const SearchBar = props => {
         <p 
           onClick={() => props.setSortAscending(!props.sortAscending)}
           className={props.sortAscending ? 'sort-asc' : 'sort-des'}
+          data-testid="list-sorting"
         >
-              Ordenando de forma <span>{props.sortAscending ? 'ascendente' : 'descendente'}</span>
+          Ordenando de forma <span>{props.sortAscending ? 'ascendente' : 'descendente'}</span>
         </p>
       </div>
     </StyledSearchBar>

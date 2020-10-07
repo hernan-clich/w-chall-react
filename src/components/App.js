@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import {GlobalStyles} from '../styles/GlobalStyles';
 import Home from './Home/Home';
@@ -10,17 +10,17 @@ import PublicRoute from './PublicRoute';
 
 const App = () => {
   return (
-    <div className="App">
-      <GlobalStyles/>
-      <BrowserRouter>
+    <Router>
+      <div className="App">
+        <GlobalStyles/>
         <Switch>
           <PublicRoute restricted={false} component={Home} path="/" exact />
           <PublicRoute restricted={true} component={Login} path="/login" exact />
           <PrivateRoute component={Lists} path="/lists" exact />
           <Route path="*" component={() => 'Error 404: La página no existe'} />
         </Switch>
-      </BrowserRouter>
-    </div>
+      </div>
+    </Router>
   );
 };
 
