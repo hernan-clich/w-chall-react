@@ -45,7 +45,7 @@ export const StyledTech = styled.section`
                 margin: 1em auto;
                 max-width: 100%;
                 max-height: 100%;
-                display: block; 
+                display: block;
             }
         }
     }
@@ -77,7 +77,7 @@ export const StyledTech = styled.section`
                 width: 52vw;
                 height: 100%;
                 padding: 0 2em 0 0;
-                
+
                 img {
                     margin: 0;
                 }

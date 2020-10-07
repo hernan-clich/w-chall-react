@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 
 import { StyledHero } from '../../styles/Home/Hero';
+import Loader from '../Loader';
+
+const HeroImg = lazy(() => import('./HeroImg'));
 
 const Hero = () => {
   return (
@@ -10,14 +13,9 @@ const Hero = () => {
           <h1>Bienvenido a tu <br/><span>Entrevista Técnica</span> en <br/><span>Wolox</span></h1>
         </div>
         <div className="hero-img">
-          <img 
-            alt="Employees surrounded by tech stuff at Wolox."
-            src="/assets/Img_Hero/Ic_ilustra_Hero.png"
-            srcSet=" 
-              /assets/Img_Hero/Ic_ilustra_Hero@2x.png 2x,
-              /assets/Img_Hero/Ic_ilustra_Hero@3x.png 3x
-            "
-          />
+          <Suspense fallback={<Loader/>}>
+            <HeroImg/>
+          </Suspense>
         </div>
       </div>
     </StyledHero>

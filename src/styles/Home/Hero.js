@@ -50,14 +50,6 @@ export const StyledHero = styled.section`
             align-items: center;
             margin: 10vh auto 0;
             padding-right: 0;
-
-            img {
-                transform: scaleX(-1);
-                margin: 1em auto;
-                max-width: 100%;
-                max-height: 100%;
-                display: block; 
-            }
         }
     }
 
