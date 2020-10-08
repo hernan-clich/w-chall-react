@@ -14,4 +14,14 @@ export const StyledRequirement = styled.div`
             font-size: 17px;
         }
     }
+
+    @media (min-width: 1361px){
+        img {
+            min-width: 1vw;
+        }
+        
+        p {
+            font-size: 1.5vw;
+        }
+    }
 `;

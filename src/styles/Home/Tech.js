@@ -84,4 +84,28 @@ export const StyledTech = styled.section`
             }
         }
     }
+
+    @media (min-width: 1361px){
+        #tech-wrapper {
+
+            .tech-text {
+                padding-left: 5vw;
+
+                h2 {
+                    font-size: 2.5vw;
+                }
+            }
+
+            .tech-img {
+                min-width: 52vw;
+                width: 52vw;
+                height: 100%;
+                padding: 0 2em 0 0;
+
+                img {
+                    width: 90%;
+                }
+            }
+        }
+    }
 `;

@@ -93,4 +93,27 @@ export const StyledFooter = styled.footer`
             }
         }
     }
+
+    @media (min-width: 1361px){
+
+        #footer-content {
+
+            h2 {
+                padding: 0.25em;
+                font-size: 3.5vw;
+                margin: 2em 0.5em 0.5em;
+            }
+
+            h3 {
+                padding: 0.25em;
+                font-size: 2vw;
+                margin-bottom: 1.5em;
+            }
+        }
+
+        .footer-logo img {
+            margin: 6em 0.5em 3em;
+            width: 7.5vw;
+        }
+    }
 `;

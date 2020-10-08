@@ -6,7 +6,7 @@ const Button = styled.div`
     cursor: pointer;
     font-family: Montserrat-Regular, sans-serif;
     text-decoration: none;
-    border-radius: 32px;
+    border-radius: 3em;
     padding: 0.5em 5em;
     text-transform: capitalize;
     font-weight: bolder;
@@ -15,6 +15,11 @@ const Button = styled.div`
     border: none;
     vertical-align: middle;
     display: inline-block;
+
+    @media (min-width: 1361px){
+        font-size: 3vh;
+        padding: 0.5em 2.5em;
+    }
 `;
 
 export const LoginButton = styled(Button)`
@@ -33,6 +38,12 @@ export const LoginButton = styled(Button)`
             background-color: ${primary()};
             color: ${plainWhite()};
         }
+    }
+
+    @media (min-width: 1361px){
+        font-size: 3vh;
+        padding: 0.5em 2.5em;
+        margin-right: 3vw;
     }
 `;
 
@@ -72,6 +83,11 @@ export const SocialButton = styled(Button)`
         margin-top: 1em;
         font-size: 20px;
     }
+
+    @media (min-width: 1361px){
+        font-size: 3vh;
+        border: 0.15em solid ${primary()};
+    }
 `;
 
 export const FooterButton = styled(Button)`
@@ -99,6 +115,26 @@ export const FooterButton = styled(Button)`
     @media (min-width: 768px){
         font-size: 18px;
     }
+
+    @media (min-width: 1361px){
+        font-size: 3vh;
+    }
+`;
+
+export const BackHomeButton = styled(FooterButton)`
+    position: absolute;
+    content: "";
+    top: 5%;
+    right: 5%;
+    text-decoration: none;
+    font-family: 'Montserrat-SemiBold';
+    margin: 0;
+    padding: 0.5em 1em;
+    font-size: 0.7rem;
+
+    @media (min-width: 1361px){
+        font-size: 1.2vw;
+    }
 `;
 
 export const FormButton = styled(FooterButton)`
@@ -106,6 +142,10 @@ export const FormButton = styled(FooterButton)`
     font-size: 1rem;
     margin-top: 1em;
     outline: none;
+
+    @media (min-width: 1361px){
+        font-size: 1.5vw;
+    }
 `;
 
 export const DisabledButton = styled(FooterButton)`
@@ -124,5 +164,9 @@ export const DisabledButton = styled(FooterButton)`
             border: none;
             cursor: not-allowed;
         }
+    }
+
+    @media (min-width: 1361px){
+        font-size: 1.5vw;
     }
 `;

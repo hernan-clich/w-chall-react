@@ -64,4 +64,13 @@ export const StyledRequirements = styled.section`
             }
         }
     }
+
+    @media (min-width: 1361px){
+        #req-wrapper {
+
+            .req-header {
+                font-size: 2vw;
+            }
+        }
+    }
 `;

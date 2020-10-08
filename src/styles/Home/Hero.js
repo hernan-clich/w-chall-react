@@ -93,4 +93,23 @@ export const StyledHero = styled.section`
             }
         }
     }
+
+    @media (min-width: 1361px){
+        #hero-wrapper {
+            
+            .hero-text {
+
+                h1 {
+                    font-size: 3.5vw;
+                    margin-left: 2em;
+                }
+            }
+
+            .hero-img {
+                width: 50vw;
+                justify-content: flex-start;
+                padding-right: ${outerSpacing()};
+            }
+        }
+    }
 `;

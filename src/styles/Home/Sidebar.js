@@ -8,9 +8,10 @@ export const StyledSidebar = styled.div`
     opacity: 1;
     width: 100vw;
     
-    .sidebar-overlay#side-open, .sidebar#side-open {
+    .sidebar-overlay#side-close, .sidebar#side-close {
         transform: translateX(0vw);
-        span, a {
+        
+        span, a:nth-child(-n+4) {
             color: ${primary(1)};
             margin: 1em 0;
             opacity: 1;
@@ -23,7 +24,6 @@ export const StyledSidebar = styled.div`
         }
 
         a:nth-child(5) {
-            color: green;
             padding: 0.5em 2.5em;
             text-transform: capitalize;
             transition: all 400ms ease;
@@ -35,9 +35,10 @@ export const StyledSidebar = styled.div`
             }
         }
     }
-    .sidebar-overlay#side-close, .sidebar#side-close {
+    
+    .sidebar-overlay#side-open, .sidebar#side-open {
         transform: translateX(100vw);
-        span, a {
+        span, a:nth-child(-n+4) {
             color: ${primary(0)};
             margin: 5em 0;
         }
@@ -59,6 +60,7 @@ export const StyledSidebar = styled.div`
         transform: translateX(100vw);
         transition: transform 300ms cubic-bezier(.5,.15,.5,.85);
     }
+
     .sidebar {
         position: fixed;
         height: 100vh;
@@ -72,6 +74,7 @@ export const StyledSidebar = styled.div`
         align-items: center;
         transform: translateX(100vw);
         transition: transform 300ms cubic-bezier(.5,.15,.5,.85);
+
         div {
             height: 60vh;
             width: 60vw;
@@ -80,7 +83,8 @@ export const StyledSidebar = styled.div`
             flex-flow: column nowrap;
             justify-content: center;
             align-items: center;
-            span, a {
+
+            span, a:nth-child(-n+4) {
                 margin: 5em 0;
                 font-size: 1.5rem;
                 font-weight: 800;
@@ -91,6 +95,11 @@ export const StyledSidebar = styled.div`
                 opacity: 0;
                 cursor: pointer;
                 transition: color 150ms ease, margin 500ms ease-in, opacity 500ms ease 200ms;
+            }
+
+            a:nth-child(5) {
+                margin: 1em 0;
+                font-size: 1.2rem;
             }
         }
     }

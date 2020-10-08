@@ -42,7 +42,6 @@ export const StyledBenefits = styled.section`
 
     @media (min-width: 576px){
         #benefits-wrapper {
-            display: grid;
             grid-template-columns: repeat(2, 1fr);
         }
     }
@@ -54,16 +53,24 @@ export const StyledBenefits = styled.section`
         }
         
         #benefits-wrapper {
-            display: grid;
             grid-template-columns: repeat(3, 1fr);
         }
     }
 
     @media (min-width: 992px){
         #benefits-wrapper {
-            display: grid;
             grid-template-columns: repeat(6, 1fr);
         }
     }
 
+    @media (min-width: 1361px){
+        
+        h2 {
+            font-size: 3vw;
+        }
+
+        #benefits-wrapper {
+            margin-bottom: 5vh;
+        }
+    }
 `;

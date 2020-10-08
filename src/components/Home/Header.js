@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { StyledHeader } from '../../styles/Home/Header';
 import NavLinks from './NavLinks';
@@ -6,7 +7,9 @@ import Burger from './Burger';
 
 const Header = () => {
   const [prevScrollpos, setPrevScrollpos] = useState(window.pageYOffset);
-  const [width, setWidth] = useState(window.innerWidth);
+
+  const currVWidth = useSelector(state => state.currVW.payload);
+  const dispatch = useDispatch();
   
   // Side effects
   // Track Y Offset position to trigger styling changes in navbar
@@ -15,7 +18,7 @@ const Header = () => {
       const currentScrollPos = window.pageYOffset;
       setPrevScrollpos(currentScrollPos);
     };
-
+    
     window.addEventListener('scroll', trackScrollPos);
     
     return () => {
@@ -26,13 +29,16 @@ const Header = () => {
   // Event listener to continuously capture the vw
 
   useEffect(() => {
-    const setWidthCallback = () => setWidth(window.innerWidth);
-        
+    const setWidthCallback = () => {
+      dispatch({type: 'VIEWPORT_WIDTH', payload: window.innerWidth});
+    };
+
     window.addEventListener('resize', setWidthCallback);
+
     return () => {
       window.removeEventListener('resize', setWidthCallback);
     };
-  }, [setWidth]);
+  }, [dispatch, currVWidth]);
   
   return (
     <StyledHeader 
@@ -45,7 +51,7 @@ const Header = () => {
           src="/assets/logo_full_color.svg" 
           alt="wolox logo" 
         />
-        {(width > 1200) ? (<NavLinks/>) : (<Burger/>)}
+        {(currVWidth > 1200) ? (<NavLinks/>) : (<Burger/>)}
       </div>
     </StyledHeader>
   );

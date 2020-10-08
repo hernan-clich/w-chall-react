@@ -65,4 +65,13 @@ export const StyledSocial = styled.section`
             }
         }
     }
+
+    @media (min-width: 1361px){
+        #social-wrapper .social-text {
+
+            h2 {
+                font-size: 3vw;
+            }
+        }
+    }
 `;

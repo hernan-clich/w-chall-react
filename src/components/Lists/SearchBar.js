@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import { StyledSearchBar } from '../../styles/Lists/SearchBar';
-import { FooterButton } from '../Buttons';
+import { BackHomeButton } from '../Buttons';
 
 const SearchBar = props => {
   
   return (
     <StyledSearchBar>
-      <FooterButton as={Link} to="/" className="list-button-back">Volver a Home</FooterButton>
+      <BackHomeButton as={Link} to="/">Volver a Home</BackHomeButton>
       <div className="list-img"/>
       <div className="list-search-input">
         <input 
@@ -21,22 +21,21 @@ const SearchBar = props => {
         />
       </div>
       <div className="list-radios" >
-        <input 
-          type="radio" 
-          value="Nombre" 
+        <div 
+          className={`list-radio-wrapper ${props.searchByName ? 'radio-ticked' : ''}`}
+          onClick={() => props.setSearchByName(true)} 
           id="nombre"
-          onChange={() => props.setSearchByName(!props.searchByName)} 
-          checked={props.searchByName} 
-
-        />
+        >
+          <div className="list-radio-tick"/>
+        </div>
         <label htmlFor="tipo" data-testid="tipo">Nombre</label>
-        <input 
-          type="radio" 
-          value="Tipo" 
+        <div 
+          className={`list-radio-wrapper ${!props.searchByName ? 'radio-ticked' : ''}`}
+          onClick={() => props.setSearchByName(false)} 
           id="tipo"
-          onChange={() => props.setSearchByName(!props.searchByName)} 
-          checked={!props.searchByName} 
-        />
+        >
+          <div className="list-radio-tick"/>
+        </div>
         <label htmlFor="tipo">Tipo</label>
       </div>
       <div className="list-sorting">

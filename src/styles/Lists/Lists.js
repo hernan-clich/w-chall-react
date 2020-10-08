@@ -30,4 +30,12 @@ export const StyledLists = styled.div`
             text-align: center;
         }
     }
+
+    @media (min-width: 1361px){
+        .list-counter-wrapper {
+            p {
+                font-size: 1.75vw;
+            }
+        }
+    }
 `;

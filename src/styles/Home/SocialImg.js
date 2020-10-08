@@ -94,4 +94,24 @@ export const StyledSocialImg = styled.div`
             }
         }   
     }
+
+    @media (min-width: 1361px){
+
+        h2 {
+            font-size: 3.5vw;
+        }
+
+        .social-twitter {
+            margin: 5% 0 3em;
+
+            img {
+                width: 50%;
+            }
+
+            span {
+                margin-left: 1em;
+                font-size: 1.5vw;
+            }
+        }   
+    }
 `;

@@ -178,4 +178,54 @@ export const StyledListItem = styled.div`
             }
         }
     }
+
+    @media (min-width: 1361px){
+        &::after {
+            height: 0.1em;
+        }
+
+        .list-top {
+            
+            .list-logo {
+                height: 50%;
+                width: 10%;
+                border-radius: 0.75em;
+                border: 0.2em solid black;
+            }
+
+            .list-tech {
+
+                .tech-header {
+                    font-size: 1.25vw;
+                }
+
+                .tech-subheader {
+                    font-size: 0.9vw;
+
+                    p:nth-child(2) {
+                        font-size: 0.8vw;
+                    }
+
+                    p:nth-child(3) {
+                        font-size: 0.75vw;
+                    }
+                }
+            }
+        }
+
+        .list-bottom {
+
+            .list-author {
+                font-size: 0.95vw;
+
+                p:nth-child(1) {
+                    font-size: 0.8vw;
+                }
+            }
+
+            .list-type {
+                font-size: 1.1vw;
+            }
+        }
+    }
 `;

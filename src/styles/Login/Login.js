@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { primary, plainWhite } from '../Variables';
 
-export const StyledForm = styled.div`
+export const StyledLogin = styled.div`
     min-height: 100vh;
     min-width: 100vw;
     position: relative;
@@ -55,18 +56,11 @@ export const StyledForm = styled.div`
                     position: absolute;
                     top: 1.8em;
                     left: 1em;
+                    color: rgba(140,140,140,1);
                     font-size: 0.8rem;
                     font-weight: 600;
                     pointer-events: none;
                     transition: all 350ms ease;
-                }
-
-                img {
-                    position: absolute;
-                    width: clamp(20px, 2%, 4%);
-                    left: 7.5%;
-                    top: 50%;
-                    transform: translateY(-50%);
                 }
 
                 input {
@@ -86,6 +80,7 @@ export const StyledForm = styled.div`
                     &:focus + label {
                         top: -0.5em;
                         font-size: 0.75rem;
+                        color: rgba(0,0,0,1);
                     }
                 }
 
@@ -98,6 +93,7 @@ export const StyledForm = styled.div`
                     + label {
                         top: -0.5em;
                         font-size: 0.75rem;
+                        color: rgba(0,0,0,1);
                     }
                 }
 
@@ -142,8 +138,24 @@ export const StyledForm = styled.div`
                 margin: 1em 0;
                 z-index: 1;
                 
-                input {
+                .form-checkbox {
+                    width: 1em;
+                    height: 1em;
+                    background-color: ${plainWhite()};
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: 1px solid rgba(1,1,1,1);
+                    border-radius: 2px;
                     cursor: pointer;
+                    z-index: 1;
+
+                    .form-checkbox-tick {
+                        width: 0.8em;
+                        height: 0.8em;
+                        background-color: ${primary()};
+                        clip-path: polygon(0 64%, 12% 50%, 40% 70%, 84% 0, 100% 8%, 44% 100%);
+                    }
                 }
 
                 p {
@@ -154,6 +166,8 @@ export const StyledForm = styled.div`
             }
         }
     }
+
+    
 
     /* Background optimization media queries */
 
@@ -176,6 +190,75 @@ export const StyledForm = styled.div`
     @media (min-width: 576px){
         #form-wrapper {
             width: 40vw;
+        }
+    }
+
+    @media (min-width: 1361px){
+        #form-wrapper {
+
+            h2 {
+                font-size: 2vw;
+            }
+            
+            form {
+
+                .input-wrapper {
+
+                    label {
+                        font-size: 1.1vw;
+                    }
+
+                    input {
+                        font-size: 1.15vw;
+
+                        &:focus {
+                            box-shadow: 0px 0px 0.15em 0.15em rgba(140,140,140,1);
+                        }
+                        
+                        &:focus + label {
+                            font-size: 1vw;
+                        }
+                    }
+
+                    .input-not-empty {
+                        + label {
+                            font-size: 1vw;
+                        }
+                    }
+
+                    .input-valid {
+                        border: 0.15em solid rgb(0, 156, 0);
+                    }
+
+                    .input-invalid {
+                        border: 0.15em  solid rgb(168, 0, 0);
+                    }
+
+                    p {
+                        font-size: 1.25vw;
+                    }
+                }
+
+                .checkbox-wrapper {
+                    width: 50%;
+
+                    .form-checkbox {
+                        min-width: 7.5%;
+                        min-height: 100%;
+                        border: 0.2em solid rgba(1,1,1,1);
+                        border-radius: 2px;
+
+                        .form-checkbox-tick {
+                            width: 70%;
+                            height: 70%;
+                        }
+                    }
+
+                    p {
+                        font-size: 1.1vw;
+                    }
+                }
+            }
         }
     }
 `;
