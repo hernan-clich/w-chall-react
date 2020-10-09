@@ -10,7 +10,7 @@ const PublicRoute = ({component: Component, restricted, ...rest}) => {
   return (
     <Route {...rest} render={props => (
       ((localStorage.getItem('user') ?? isUserLoggedIn) && restricted)
-        ? <Redirect to="/" />
+        ? <Redirect to="/lists" />
         : <Component {...props} />
     )}/>
   );

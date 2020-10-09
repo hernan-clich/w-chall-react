@@ -3,13 +3,13 @@
 exports[`Lists component test Snapshot of Lists 1`] = `
 <DocumentFragment>
   <div
-    class="sc-bdnylx rcKPI"
+    class="sc-bdnylx isvsjk"
   >
     <div
-      class="sc-gtssRu gxRolR"
+      class="sc-gtssRu cOauSt"
     >
       <a
-        class="sc-dlnjPT sc-gKAblj gYrkDS eEUOIx list-button-back"
+        class="sc-dlnjPT sc-gKAblj sc-iCoHVE btVOhm iYvDKD dfaScl"
         href="/"
       >
         Volver a Home
@@ -30,23 +30,28 @@ exports[`Lists component test Snapshot of Lists 1`] = `
       <div
         class="list-radios"
       >
-        <input
-          checked=""
+        <div
+          class="list-radio-wrapper radio-ticked"
           id="nombre"
-          type="radio"
-          value="Nombre"
-        />
+        >
+          <div
+            class="list-radio-tick"
+          />
+        </div>
         <label
           data-testid="tipo"
           for="tipo"
         >
           Nombre
         </label>
-        <input
+        <div
+          class="list-radio-wrapper "
           id="tipo"
-          type="radio"
-          value="Tipo"
-        />
+        >
+          <div
+            class="list-radio-tick"
+          />
+        </div>
         <label
           for="tipo"
         >
@@ -68,7 +73,7 @@ exports[`Lists component test Snapshot of Lists 1`] = `
       </div>
     </div>
     <div
-      class="sc-jrsJCI khxShv"
+      class="sc-kEqYlL cHyWym"
     />
   </div>
 </DocumentFragment>
