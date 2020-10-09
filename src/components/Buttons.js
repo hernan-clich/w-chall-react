@@ -64,7 +64,7 @@ export const SocialButton = styled(Button)`
     border: 2px solid ${primary()};
     margin-top: 0;
     margin: 1em 0 3em;
-    font-size: 12px;
+    font-size: 1em;
     padding: 0.5em 4em;
     transition: all 300ms ease-in-out;
 
@@ -81,7 +81,7 @@ export const SocialButton = styled(Button)`
 
     @media (min-width: 768px){
         margin-top: 1em;
-        font-size: 20px;
+        font-size: 1.25em;
     }
 
     @media (min-width: 1361px){
