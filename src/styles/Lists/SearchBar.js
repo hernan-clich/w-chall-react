@@ -63,53 +63,63 @@ export const StyledSearchBar = styled.div`
     .list-radios {
         display: flex;
         flex-flow: row nowrap;
-        margin-top: 1.5em;
         align-items: center;
+        margin-top: 1.5em;
 
-        .list-radio-wrapper {
-            width: 0.9em;
-            height: 0.9em;
+        .single-list-radio {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            padding: 0.25em 0;
             margin: 0 0.5em;
-            background-color: rgba(120, 120,120,1);
-            clip-path: circle(50% at 50% 50%);
-            position: relative;
             cursor: pointer;
 
-            &::before {
-                position: absolute;
-                content:"";
-                top: 7.5%;
-                right: 7.5%;
-                bottom: 7.5%;
-                left: 7.5%;
-                background-color: ${plainWhite()};
+            .list-radio-wrapper {
+                width: 0.9em;
+                height: 0.9em;
+                margin: 0 0.5em;
+                background-color: rgba(120, 120,120,1);
                 clip-path: circle(50% at 50% 50%);
+                position: relative;
+                cursor: pointer;
+
+                &::before {
+                    position: absolute;
+                    content:"";
+                    top: 7.5%;
+                    right: 7.5%;
+                    bottom: 7.5%;
+                    left: 7.5%;
+                    background-color: ${plainWhite()};
+                    clip-path: circle(50% at 50% 50%);
+                }
+
+                .list-radio-tick {
+                    position: absolute;
+                    content:""; 
+                    clip-path: circle(0% at 50% 50%);
+                    transition: clip-path 500ms ease;
+                }
             }
 
-            .list-radio-tick {
-                position: absolute;
-                content:""; 
-                clip-path: circle(0% at 50% 50%);
-                transition: clip-path 500ms ease;
-            }
-        }
-
-        .radio-ticked.list-radio-wrapper  {
-            background-color: ${primary()};
-
-            .list-radio-tick {
-                
-                width: 100%;
-                height: 100%;
+            .radio-ticked.list-radio-wrapper  {
                 background-color: ${primary()};
-                clip-path: circle(30% at 50% 50%);
-            }
-        }
 
-        label {
-            font-family: 'Montserrat-Medium';
-            font-size: 0.8rem;
-            margin-right: 1em;
+                .list-radio-tick {
+                    
+                    width: 100%;
+                    height: 100%;
+                    background-color: ${primary()};
+                    clip-path: circle(30% at 50% 50%);
+                }
+            }
+
+            label {
+                font-family: 'Montserrat-Medium';
+                font-size: 0.8rem;
+                margin-right: 1em;
+                cursor: pointer;
+            }
         }
     }
     
@@ -126,6 +136,7 @@ export const StyledSearchBar = styled.div`
             font-size: 0.75rem;
             cursor: pointer;
             position: relative;
+            padding: 0.5em;
 
             &::after {
                 position: absolute;

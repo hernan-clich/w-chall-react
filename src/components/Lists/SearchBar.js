@@ -21,22 +21,28 @@ const SearchBar = props => {
         />
       </div>
       <div className="list-radios" >
-        <div 
-          className={`list-radio-wrapper ${props.searchByName ? 'radio-ticked' : ''}`}
+        <div className="single-list-radio"
           onClick={() => props.setSearchByName(true)} 
-          id="nombre"
         >
-          <div className="list-radio-tick"/>
+          <div 
+            className={`list-radio-wrapper ${props.searchByName ? 'radio-ticked' : ''}`}
+            id="nombre"
+          >
+            <div className="list-radio-tick"/>
+          </div>
+          <label htmlFor="tipo" data-testid="tipo">Nombre</label>
         </div>
-        <label htmlFor="tipo" data-testid="tipo">Nombre</label>
-        <div 
-          className={`list-radio-wrapper ${!props.searchByName ? 'radio-ticked' : ''}`}
+        <div className="single-list-radio"
           onClick={() => props.setSearchByName(false)} 
-          id="tipo"
         >
-          <div className="list-radio-tick"/>
+          <div 
+            className={`list-radio-wrapper ${!props.searchByName ? 'radio-ticked' : ''}`}
+            id="tipo"
+          >
+            <div className="list-radio-tick"/>
+          </div>
+          <label htmlFor="tipo">Tipo</label>
         </div>
-        <label htmlFor="tipo">Tipo</label>
       </div>
       <div className="list-sorting">
         <p 

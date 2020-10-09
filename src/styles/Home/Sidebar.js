@@ -113,7 +113,13 @@ export const StyledSidebar = styled.div`
     and (max-device-height: 480px) {
         .sidebar div {
             margin-top: 15vh;
-            span, a {
+            span, a:nth-child(-n+4) {
+                font-size: 0.9rem;
+                margin: 0.1em 0;
+            }
+
+            a:nth-child(5) {
+                margin: 0.1em 0;
                 font-size: 0.9rem;
             }
         }
