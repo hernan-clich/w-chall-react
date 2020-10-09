@@ -17,7 +17,7 @@ const Footer = () => {
         >Conocer más</FooterButton>
       </div>
       <div className="footer-logo">
-        <img src="/assets/Ic_Wolox_Footer.svg" alt="wolox logo"/>
+        <img src="./assets/Ic_Wolox_Footer.svg" alt="wolox logo"/>
       </div>
     </StyledFooter>
   );

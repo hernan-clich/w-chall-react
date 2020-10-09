@@ -9,11 +9,11 @@ const HeroImg = () => {
 
   const setImgSrc = width => {
     if (width > 2520) {
-      return '/assets/Img_Hero/Ic_ilustra_Hero@3x.png';
+      return './assets/Img_Hero/Ic_ilustra_Hero@3x.png';
     } else if (width > 1680) {
-      return '/assets/Img_Hero/Ic_ilustra_Hero@2x.png';
+      return './assets/Img_Hero/Ic_ilustra_Hero@2x.png';
     } else {
-      return '/assets/Img_Hero/Ic_ilustra_Hero.png';
+      return './assets/Img_Hero/Ic_ilustra_Hero.png';
     }
   };
 

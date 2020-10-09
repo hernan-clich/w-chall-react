@@ -27,7 +27,7 @@ const Tech = () => {
           <h2>Estamos buscando <br/>para incorporar gente <br/> increíble para estas <br/> tecnologías:</h2>
         </div>
         <div className="tech-img">
-          <img src="/assets/Ic_Tecnologys.svg" alt="Technologies list"/>
+          <img src="./assets/Ic_Tecnologys.svg" alt="Technologies list"/>
         </div>
       </motion.div>
     </StyledTech>

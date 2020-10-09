@@ -9,7 +9,7 @@ const SocialImg = () => {
       <div className="social-overlay"/>
       <h2><span>350 + </span><span>Woloxers</span></h2>
       <div className="social-twitter">
-        <img src="/assets/twitter-logo.svg" alt="twitter logo" />
+        <img src="./assets/twitter-logo.svg" alt="twitter logo" />
         <span>@Wolox</span>
       </div>
       <SocialButton 

@@ -48,7 +48,7 @@ const Header = () => {
     >
       <div id="header-wrapper">
         <img 
-          src="/assets/logo_full_color.svg" 
+          src="./assets/logo_full_color.svg" 
           alt="wolox logo" 
         />
         {(currVWidth > 1200) ? (<NavLinks/>) : (<Burger/>)}

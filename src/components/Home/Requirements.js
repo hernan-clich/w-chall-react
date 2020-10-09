@@ -12,17 +12,17 @@ const Requirements = () => {
         </div>
         <div className="req-bullets-wrapper">
           <SingleRequirement
-            reqSrc="/assets/Ic_Bullet_1.svg"
+            reqSrc="./assets/Ic_Bullet_1.svg"
             reqAlt="green bullet dot"
             reqText="Estudiantes avanzados o recibidos de carreras del rubro informático, sistemas o electrónicos."
           />
           <SingleRequirement
-            reqSrc="/assets/Ic_Bullet_2.svg"
+            reqSrc="./assets/Ic_Bullet_2.svg"
             reqAlt="black bullet dot"
             reqText="Inglés intermedio/avanzado"
           />
           <SingleRequirement
-            reqSrc="/assets/Ic_Bullet_3.svg"
+            reqSrc="./assets/Ic_Bullet_3.svg"
             reqAlt="blue bullet dot"
             reqText="Conocimiento en metodologías ágiles (deseable)"
           />
