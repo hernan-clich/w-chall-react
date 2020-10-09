@@ -105,7 +105,7 @@ export const StyledSocialImg = styled.div`
             margin: 5% 0 3em;
 
             img {
-                width: 50%;
+                max-width: 50%;
             }
 
             span {

@@ -230,15 +230,21 @@ export const StyledSearchBar = styled.div`
             height: 5vh;
             margin-top: 3vh;
 
-            .list-radio-wrapper {
-                min-width: 8%;
-                padding-bottom:8%;
-            }
+            .single-list-radio {
+                min-width: 50%;
+                min-height: 100%;
+                margin: 0 0.5em;
 
-            label {
-                font-family: 'Montserrat-Medium';
-                font-size: 1vw;
-                margin: 0 1em 0 0.25em;
+                .list-radio-wrapper {
+                    min-width: 12.5%;
+                    padding-bottom: 12.5%;
+                }
+
+                label {
+                    font-family: 'Montserrat-Medium';
+                    font-size: 1vw;
+                    margin: 0 1em 0 0.25em;
+                }
             }
         }
 
@@ -250,7 +256,8 @@ export const StyledSearchBar = styled.div`
 
                 &::after {
                     width: 5%;
-                    height: 80%;
+                    min-height: 45%;
+                    max-height: 80%;
                 }
             }
 
