@@ -8,7 +8,7 @@ import Loader from '../Loader';
 
 // Fetching data from API
 const fetchTecnologias = async () => {
-  const res = await fetch('http://private-8e8921-woloxfrontendinverview.apiary-mock.com/techs');
+  const res = await fetch('https://private-8e8921-woloxfrontendinverview.apiary-mock.com/techs');
   return res.json();
 };
 
