@@ -6,7 +6,7 @@ exports[`Lists component test Snapshot of Lists 1`] = `
     class="sc-bdnylx isvsjk"
   >
     <div
-      class="sc-gtssRu cOauSt"
+      class="sc-gtssRu dEOhEO"
     >
       <a
         class="sc-dlnjPT sc-gKAblj sc-iCoHVE btVOhm iYvDKD dfaScl"
@@ -31,32 +31,40 @@ exports[`Lists component test Snapshot of Lists 1`] = `
         class="list-radios"
       >
         <div
-          class="list-radio-wrapper radio-ticked"
-          id="nombre"
+          class="single-list-radio"
         >
           <div
-            class="list-radio-tick"
-          />
+            class="list-radio-wrapper radio-ticked"
+            id="nombre"
+          >
+            <div
+              class="list-radio-tick"
+            />
+          </div>
+          <label
+            data-testid="tipo"
+            for="tipo"
+          >
+            Nombre
+          </label>
         </div>
-        <label
-          data-testid="tipo"
-          for="tipo"
-        >
-          Nombre
-        </label>
         <div
-          class="list-radio-wrapper "
-          id="tipo"
+          class="single-list-radio"
         >
           <div
-            class="list-radio-tick"
-          />
+            class="list-radio-wrapper "
+            id="tipo"
+          >
+            <div
+              class="list-radio-tick"
+            />
+          </div>
+          <label
+            for="tipo"
+          >
+            Tipo
+          </label>
         </div>
-        <label
-          for="tipo"
-        >
-          Tipo
-        </label>
       </div>
       <div
         class="list-sorting"
