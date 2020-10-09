@@ -137,6 +137,7 @@ export const StyledLogin = styled.div`
                 align-items: center;
                 margin: 1em 0;
                 z-index: 1;
+                padding: 0.25em;
                 
                 .form-checkbox {
                     width: 1em;
@@ -162,12 +163,11 @@ export const StyledLogin = styled.div`
                     padding-left: 1em;
                     font-size: 0.8rem;
                     font-family: Montserrat-SemiBold;
+                    cursor: pointer;
                 }
             }
         }
     }
-
-    
 
     /* Background optimization media queries */
 

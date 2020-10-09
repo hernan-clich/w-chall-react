@@ -103,9 +103,13 @@ const Login = () => {
             <label htmlFor="password">Password</label>
             <p>La contraseña debe contener entre 8 y 15 caracteres, por lo menos una letra mayúscula, una letra minúscula, un número y un caracter especial</p>
           </div>
-          <div className="checkbox-wrapper">
-            <div className="form-checkbox"
-              onClick={() => setInputChecked(!inputChecked)}
+          <div className="checkbox-wrapper"
+            onClick={() => setInputChecked(!inputChecked)}
+          >
+            <div 
+              className="form-checkbox" 
+              tabIndex="0"
+              onKeyPress={e => (e.key === 'Enter' || e.key === ' ') && setInputChecked(!inputChecked)}
             >
               {(inputChecked) && <div className="form-checkbox-tick"/>}
             </div>

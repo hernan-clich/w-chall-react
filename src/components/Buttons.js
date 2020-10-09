@@ -142,6 +142,11 @@ export const FormButton = styled(FooterButton)`
     font-size: 1rem;
     margin-top: 1em;
     outline: none;
+    box-shadow: 0px 0px 0px 0px rgba(217,217,217,0);
+
+    &:focus {
+        box-shadow: 0px 0px 0px 0.1em rgba(0,0,0,0.75);
+    }
 
     @media (min-width: 1361px){
         font-size: 1.5vw;
