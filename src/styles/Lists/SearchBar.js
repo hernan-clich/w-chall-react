@@ -233,11 +233,11 @@ export const StyledSearchBar = styled.div`
             .single-list-radio {
                 min-width: 50%;
                 min-height: 100%;
-                margin: 0 0.5em;
+                margin: 0 0.75vw;
 
                 .list-radio-wrapper {
-                    min-width: 12.5%;
-                    padding-bottom: 12.5%;
+                    min-width: 15%;
+                    padding-bottom: 15%;
                 }
 
                 label {
